@@ -275,6 +275,7 @@ impl MainWorker {
       ops::timers::init(isolate, &state);
       ops::tty::init(isolate, &state);
       ops::worker_host::init(isolate, &state);
+      ops::simd::init(isolate, &state);
     }
     Self(worker)
   }

@@ -27,6 +27,7 @@ pub mod resources;
 pub mod runtime;
 pub mod runtime_compiler;
 pub mod signal;
+pub mod simd;
 pub mod timers;
 pub mod tls;
 pub mod tty;
