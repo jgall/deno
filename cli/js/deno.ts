@@ -73,6 +73,9 @@ export { writeTextFileSync, writeTextFile } from "./write_text_file.ts";
 export const args: string[] = [];
 export { TestDefinition, test } from "./testing.ts";
 
+// SIMD THINGS
+export { _sendSync, SIMD, SIMD_THREAD } from "./ops/simd.ts";
+
 // These are internal Deno APIs.  We are marking them as internal so they do not
 // appear in the runtime type library.
 export { core } from "./core.ts";
