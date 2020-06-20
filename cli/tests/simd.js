@@ -16,13 +16,6 @@ function bench(n) {
   let mul_32_times = [];
   for (let i = 0; i < 30; i++) {
     let start = performance.now();
-    // let res = Deno._sendSync(
-    //   "simd_mm256_mul_pd",
-    //   {},
-    //   new Uint8Array(a.buffer),
-    //   new Uint8Array(b.buffer),
-    //   c
-    // );
     mul_32(a32, b32, c32);
     let end = performance.now();
     mul_32_times.push(end - start);
@@ -31,13 +24,6 @@ function bench(n) {
   let mul_thread_32_times = [];
   for (let i = 0; i < 30; i++) {
     let start = performance.now();
-    // let res = Deno._sendSync(
-    //   "simd_mm256_mul_pd",
-    //   {},
-    //   new Uint8Array(a.buffer),
-    //   new Uint8Array(b.buffer),
-    //   c
-    // );
     mul_thread_32(a32, b32, c32);
     let end = performance.now();
     mul_thread_32_times.push(end - start);
@@ -45,13 +31,6 @@ function bench(n) {
   let mul_js_32_times = [];
   for (let i = 0; i < 30; i++) {
     let start = performance.now();
-    // let res = Deno._sendSync(
-    //   "simd_mm256_mul_pd",
-    //   {},
-    //   new Uint8Array(a.buffer),
-    //   new Uint8Array(b.buffer),
-    //   c
-    // );
     js_float_mul(a32, b32, c32);
     let end = performance.now();
     mul_js_32_times.push(end - start);
@@ -66,13 +45,6 @@ function bench(n) {
   let mul_64_times = [];
   for (let i = 0; i < 30; i++) {
     let start = performance.now();
-    // let res = Deno._sendSync(
-    //   "simd_mm256_mul_pd",
-    //   {},
-    //   new Uint8Array(a.buffer),
-    //   new Uint8Array(b.buffer),
-    //   c
-    // );
     mul_64(a64, b64, c64);
     let end = performance.now();
     mul_64_times.push(end - start);
@@ -80,13 +52,6 @@ function bench(n) {
   let mul_thread_64_times = [];
   for (let i = 0; i < 30; i++) {
     let start = performance.now();
-    // let res = Deno._sendSync(
-    //   "simd_mm256_mul_pd",
-    //   {},
-    //   new Uint8Array(a.buffer),
-    //   new Uint8Array(b.buffer),
-    //   c
-    // );
     mul_thread_64(a64, b64, c64);
     let end = performance.now();
     mul_thread_64_times.push(end - start);
@@ -94,13 +59,6 @@ function bench(n) {
   let mul_js_64_times = [];
   for (let i = 0; i < 30; i++) {
     let start = performance.now();
-    // let res = Deno._sendSync(
-    //   "simd_mm256_mul_pd",
-    //   {},
-    //   new Uint8Array(a.buffer),
-    //   new Uint8Array(b.buffer),
-    //   c
-    // );
     js_float_mul(a64, b64, c64);
     let end = performance.now();
     mul_js_64_times.push(end - start);
